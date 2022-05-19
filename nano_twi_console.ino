@@ -24,8 +24,8 @@ const uint32_t UART_speed = 115200;
 bool dataPresent = false;
 
 /*
-   Client receive data callback
-*/
+ *  Client receive data callback
+ */
 void onReceiveService(uint8_t* inBytes, int numBytes)
 {
   //Get bytes from buffer and send to UART
@@ -40,8 +40,8 @@ void onReceiveService(uint8_t* inBytes, int numBytes)
 }
 
 /*
-   Setup HW (LED, UART, TWI/I2C)
-*/
+ *  Setup HW (LED, UART, TWI/I2C)
+ */
 void setup()
 {
   // Prepare LED GPIO
@@ -59,8 +59,8 @@ void setup()
 }
 
 /*
-   Main loop
-*/
+ *  Main loop
+ */
 void loop()
 {
   if (dataPresent) {
