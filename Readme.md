@@ -8,5 +8,6 @@ Connections:
 - SDA (A4)
 - GND
 
+![ArduinoNanoPinout](ArduinoNanoPinout.jpeg)
 Project uses twi.c - TWI/I2C library for Wiring & Arduino
 Copyright (c) 2006 Nicholas Zambetti
