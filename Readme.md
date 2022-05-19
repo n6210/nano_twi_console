@@ -1,15 +1,16 @@
-Simple FTDI UM201XB replacement.
+Simple FTDI UM201XB or Holtek HT42B532-x replacement.
 
-Act as a TWI/I2C slave device at the address 0x22
-and passes all data to the UART (one direction).
+By default it act as UM201XB TWI/I2C slave device at the address 0x22.
+It passes all data TWI -> UART only.
 
-This implementation works with TWI speed 400kbit and
-maximal length  of the single transfer 64 bytes.
-It can be easly changed in twi.h.
+For a Holtek the TWI address must be changed to be current one.
+
+TWI speed is set to be max. 400kbit and maximal length
+of the single transfer 64 bytes. It can be easly changed in twi.h.
 
 Checked with a boards:
-- Arduino Nano ATMega168 (1Mbit UART)
-- LGT8F328P (460kbit UART)
+- Arduino Nano ATMega168 (1Mbit UART with CH340G)
+- Arduino Nano3 compatible LGT8F328P (460kbit UART with HT42B534-1)
 
 Connections:
 - SCL (A5)
