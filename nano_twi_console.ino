@@ -37,11 +37,7 @@ bool dataPresent = false;
 void onReceiveService(uint8_t* inBytes, int numBytes)
 {
   //Get bytes from buffer and send to UART
-  while (numBytes > 0) {
-    char c = *inBytes++;
-    Serial.print(c);
-    numBytes--;
-  }
+  Serial.write(inBytes, numBytes);
 
   // Trigger LED
   dataPresent = true;
