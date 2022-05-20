@@ -21,3 +21,8 @@ Connections:
 
 Project uses twi.c - TWI/I2C library for Wiring & Arduino
 Copyright (c) 2006 Nicholas Zambetti
+
+Packages for LGT8F328P
+https://raw.githubusercontent.com/dbuezas/lgt8fx/master/package_lgt8fx_index.json
+for ATMega8/168
+https://mcudude.github.io/MiniCore/package_MCUdude_MiniCore_index.json
