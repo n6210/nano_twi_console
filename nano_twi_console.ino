@@ -16,7 +16,6 @@ extern "C" {
 
 // TWI/I2C addres taken over from FTDI UM201XB
 const uint8_t TWI_address = 0x22;
-const uint32_t TWI_speed = 400000;
 
 #ifdef ARDUINO_AVR_LARDU_328E
 // LGT8F328 460800 boud @ 32MHz,
@@ -55,8 +54,7 @@ void setup()
   Serial.begin(UART_speed);
   Serial.println("NanoTWI console @ 0x22");
 
-  // Set TWI speed, initialize, register callback, set slave address
-  twi_setFrequency(TWI_speed);
+  // Initialize, set register callback, set slave address
   twi_init();
   twi_attachSlaveRxEvent(onReceiveService);
   twi_setAddress(TWI_address);
